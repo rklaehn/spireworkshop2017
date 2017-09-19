@@ -9,3 +9,6 @@ libraryDependencies ++= Seq(
 	"com.github.ichoran" %% "thyme" % "0.1.2-SNAPSHOT" % "test",
 	"org.scalacheck" %% "scalacheck" % "1.13.5" % "test"
 )
+
+initialCommands in console += "import spire.math._\n"
+initialCommands in console += "import spire.implicits._\n"
