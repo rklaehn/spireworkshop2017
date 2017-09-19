@@ -22,3 +22,20 @@ Now you're ready to download and start using the starter project:
 1. `cd spireworkshop2017`
 1. `sbt test:compile`
 
+# Possible topics
+
+* Short tour
+
+* Providing instances for existing types
+
+* Law checking with Discipline
+
+* Writing simple generic algorithms
+
+* Test with sane number type, run with double
+
+* Ensuring that code is both generic and fast
+
+* Working with intervals
+
+* Working with interval sets
