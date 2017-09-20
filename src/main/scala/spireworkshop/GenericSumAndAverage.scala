@@ -7,13 +7,13 @@ import spire.algebra._
 object GenericSumAndAverage {
 
   def sumAndAverageGeneric[@specialized T: Field](xs: Array[T]): (T, T) = {
-    var sum: T = Field[T].zero
-    var i = 0
-    while(i < xs.length) {
-      sum += xs(i)
-      i += 1
+    def sum0(i: Int, sum: T): (T, T) = {
+      if(i == xs.length)
+        (sum, sum / xs.length)
+      else
+        sum0(i + 1, sum + xs(i))
     }
-    (sum, sum / xs.length)
+    sum0(0, Field[T].zero)
   }
 
   def sumAndAverageDouble(xs: Array[Double]): (Double, Double) = {

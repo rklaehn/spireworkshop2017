@@ -6,8 +6,8 @@ import spire.implicits._
 
 object GenericVsDoubleBench extends App {
 
-  val th = Thyme.warmed(warmth = Thyme.HowWarm.BenchOff)
-  val xs = (0 until 10).map(_.toDouble).toArray
+  val th: Thyme = Thyme.warmed(warmth = Thyme.HowWarm.BenchOff)
+  val xs: Array[Double] = (0 until 100).map(_.toDouble).toArray
 
   th.pbenchOffWarm("generic vs. double sumandaverage")(th.Warm(sumAndAverageDouble(xs)))(th.Warm(sumAndAverageGeneric(xs)))
 }

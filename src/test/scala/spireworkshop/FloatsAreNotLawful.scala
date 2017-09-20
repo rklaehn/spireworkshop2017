@@ -7,10 +7,12 @@ import org.typelevel.discipline.scalatest.Discipline
 import spire.laws._
 import spire.laws.arb._
 
+/*
 class FloatsAreNotLawful extends FunSuite with Discipline {
 
   checkAll("RingLaws[Double].ring", RingLaws[Double].ring)
 }
+*/
 
 class RationalsAreLawful extends FunSuite with Discipline {
 
